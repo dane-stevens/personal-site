@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import { Img } from '@tueri/react'
-
+import './button.css'
 
 class BlogIndex extends React.Component {
   render() {
@@ -34,10 +34,11 @@ class BlogIndex extends React.Component {
                 </Link>
               </h3>
               <small>{node.isoDate}</small>
-              <Img src={imageNode.src} alt={ imageNode.alt } />
+              <Link style={{ boxShadow: `none` }} to={node.link.replace('https://tueri.io','')}><Img src={imageNode.src} alt={ imageNode.alt } /></Link>
               <p>
                 {node.contentSnippet}
-                </p>
+              </p>
+              <Link className='button' to={node.link.replace('https://tueri.io','')}>Read more</Link>
             </div>
           )
         })}
