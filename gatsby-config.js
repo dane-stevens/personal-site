@@ -16,6 +16,7 @@ module.exports = {
     //     name: `blog`,
     //   },
     // },
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-source-rss-feed`,
       options: {
